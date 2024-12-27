@@ -1,5 +1,4 @@
 * {
-   
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -79,7 +78,7 @@ h2 {
 
 .item.boxopen {
   transform: rotateY(0deg);
-} 
+}
 
 .item::after {
   content: "";
@@ -91,8 +90,8 @@ h2 {
   backface-visibility: hidden;
 }
 
-.boxopen::after, 
-.boxmatch::after 
+.boxopen::after,
+.boxmatch::after
 {
   transform: rotateY(180deg);
 }
