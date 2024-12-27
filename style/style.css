@@ -1,4 +1,5 @@
-* { 
+* {
+   
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -16,7 +17,8 @@ body {
 .container {
   position: relative;
   display: flex;
-  justify-content: center;align-items: center;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   gap: 1.8rem;
   padding: 40px 60px;
@@ -89,8 +91,8 @@ h2 {
   backface-visibility: hidden;
 }
 
-.boxopen::after ,
-.boxmatch::after
+.boxopen::after, 
+.boxmatch::after 
 {
   transform: rotateY(180deg);
 }
