@@ -29,8 +29,8 @@ for (let item of newTab) {
     setTimeout(() => {
       if (document.querySelectorAll(".boxopen").length > 1) {
         if (
-          (document.querySelectorAll(".boxopen")[0].innerHTML ==
-            document.querySelectorAll(".boxopen")[1].innerHTML)
+          document.querySelectorAll(".boxopen")[0].innerHTML ==
+          document.querySelectorAll(".boxopen")[1].innerHTML
         ) {
           document.querySelectorAll(".boxopen")[0].classList.add("boxmatch");
           document.querySelectorAll(".boxopen")[1].classList.add("boxmatch");
@@ -53,10 +53,47 @@ for (let item of newTab) {
   document.querySelector(".game").append(box);
 }
 
-// document.querySelectorAll(".item").forEach((Item)=>{
-//   Item.addEventListener("click",()=>{
-//     Item.classList.add("boxopen")
-//     console.log("ad")
+let timer;
+let totalSeconds = 60;
+function startCountdown() {
+  timer = setInterval(() => {
+    if (totalSeconds <= 0) {
+      clearInterval(timer);
+      document.querySelector(".chromometre").textContent = "Temps écoulé !";
+      changeAfterTimeOver();
+      return;
+    }
 
-//   })
-// })
+    totalSeconds--;
+
+    const minutes = Math.floor(totalSeconds / 60);
+    const seconds = totalSeconds % 60;
+
+    document.querySelector(".chromometre").textContent =
+      String(minutes).padStart(2, "0") + ":" + String(seconds).padStart(2, "0");
+  }, 1000);
+}
+
+// fonction pour cache les sections
+isclik = false;
+function changeSection() {
+  section1 = document.querySelector(".started");
+  section2 = document.querySelector(".container");
+  isclik = !isclik;
+  console.log(isclik);
+  if (isclik) {
+    section1.style.display = "none";
+    section2.style.display = "flex";
+    startCountdown();
+  }
+}
+
+function changeAfterTimeOver(){
+  section1 = document.querySelector(".started");
+  section2 = document.querySelector(".container");
+  section1.style.display = "flex";
+  section2.style.display = "none";
+}
+
+
+document.querySelector(".start-btn").addEventListener("click",changeSection);

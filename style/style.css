@@ -13,7 +13,7 @@ body {
   background: #dad8d8;
 }
 
-.container {
+.started {
   position: relative;
   display: flex;
   justify-content: center;
@@ -22,6 +22,39 @@ body {
   gap: 1.8rem;
   padding: 40px 60px;
   background: #0d614b;
+  color: #fff;
+  & h1 {
+    font-size: 3rem;
+  }
+  & button {
+    padding: 15px 20px;
+    color: #267c65;
+    background: #fff;
+    border: none;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 15px;
+  }
+}
+
+.container {
+  position: relative;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.8rem;
+  padding: 40px 60px;
+  background: #0d614b;
+}
+
+.chromometre {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
 }
 
 h2 {
