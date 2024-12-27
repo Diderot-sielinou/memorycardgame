@@ -64,7 +64,7 @@ h2 {
 
 .item {
   position: relative;
-  width: calc(93%/4);
+  width: calc(93% / 4);
   height: 106px;
   display: flex;
   justify-content: center;
@@ -91,8 +91,6 @@ h2 {
 }
 
 .boxopen::after,
-.boxmatch::after
-
-{
+.boxmatch::after {
   transform: rotateY(180deg);
 }
