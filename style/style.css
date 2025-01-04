@@ -23,9 +23,11 @@ body {
   padding: 40px 60px;
   background: #0d614b;
   color: #fff;
+
   & h1 {
     font-size: 3rem;
   }
+  
   & button {
     padding: 15px 20px;
     color: #267c65;

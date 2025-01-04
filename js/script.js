@@ -75,10 +75,10 @@ function startCountdown() {
 }
 
 // fonction pour cache les sections
-isclik = false;
+let isclik = false;
 function changeSection() {
-  section1 = document.querySelector(".started");
-  section2 = document.querySelector(".container");
+  let section1 = document.querySelector(".started");
+  let section2 = document.querySelector(".container");
   isclik = !isclik;
   console.log(isclik);
   if (isclik) {
@@ -89,10 +89,10 @@ function changeSection() {
 }
 
 function changeAfterTimeOver(){
-  section1 = document.querySelector(".started");
-  section2 = document.querySelector(".container");
+  let section1 = document.querySelector(".started");
+  let section2 = document.querySelector(".container");
   section1.style.display = "flex";
-  section2.style.display = "none";
+   section2.style.display = "none";
 }
 
 
