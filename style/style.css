@@ -21,7 +21,7 @@ body {
   flex-direction: column;
   gap: 1.8rem;
   padding: 40px 60px;
-  background: #0d614b;
+  background: #6e3482;
   color: #fff;
 
   & h1 {
@@ -30,7 +30,7 @@ body {
 
   & button {
     padding: 15px 20px;
-    color: #267c65;
+    color: #6e3482;
     background: #fff;
     border: none;
     font-size: 1.5rem;
@@ -50,7 +50,7 @@ body {
   flex-direction: column;
   gap: 1.8rem;
   padding: 40px 60px;
-  background: #0d614b;
+  background: #6e3482;
 }
 
 .chromometre {
@@ -68,7 +68,7 @@ h2 {
 
 .restart {
   padding: 15px 20px;
-  color: #267c65;
+  color: #6e3482;
   background: #fff;
   border: none;
   font-size: 1.5rem;
@@ -119,7 +119,7 @@ h2 {
   content: "";
   position: absolute;
   inset: 0;
-  background: #209d7b;
+  background: #a56abd;
   transition: 0.25s;
   transform: rotateY(0deg);
   backface-visibility: hidden;
