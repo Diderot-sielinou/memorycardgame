@@ -1,4 +1,4 @@
-* { 
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -13,14 +13,50 @@ body {
   background: #dad8d8;
 }
 
-.container {
+.started {
   position: relative;
   display: flex;
-  justify-content: center;align-items: center;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   gap: 1.8rem;
   padding: 40px 60px;
-  background: #0d614b;
+  background: #6e3482;
+  color: #fff;
+
+  & h1 {
+    font-size: 3rem;
+  }
+
+  & button {
+    padding: 15px 20px;
+    color: #6e3482;
+    background: #fff;
+    border: none;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 15px;
+  }
+}
+
+.container {
+  position: relative;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.8rem;
+  padding: 40px 60px;
+  background: #6e3482;
+}
+
+.chromometre {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
 }
 
 h2 {
@@ -32,7 +68,7 @@ h2 {
 
 .restart {
   padding: 15px 20px;
-  color: #267c65;
+  color: #6e3482;
   background: #fff;
   border: none;
   font-size: 1.5rem;
@@ -63,7 +99,7 @@ h2 {
 
 .item {
   position: relative;
-  width: calc(93%/4);
+  width: calc(93% / 4);
   height: 106px;
   display: flex;
   justify-content: center;
@@ -77,18 +113,19 @@ h2 {
 
 .item.boxopen {
   transform: rotateY(0deg);
-} 
+}
 
 .item::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: #209d7b;
+  background: #a56abd;
   transition: 0.25s;
   transform: rotateY(0deg);
   backface-visibility: hidden;
 }
 
-/* .boxopen::after {
-  transform: rotateX(180deg);
-} */
+.boxopen::after,
+.boxmatch::after {
+  transform: rotateY(180deg);
+}
