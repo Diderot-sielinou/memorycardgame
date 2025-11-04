@@ -15,9 +15,9 @@ const emojieTab = [
   "😍",
   "😍",
   "🧑‍💻",
-  "🧑‍💻",
+  "🧑‍💻"
 ];
-// console.log(emojieTab);
+// console.log(emojieTab)
 const buton = document.querySelector(".restart");
 buton.addEventListener("click", () => window.location.reload());
 const newTab = emojieTab.sort(() => (Math.random() > 0.5 ? 2 : -1));
