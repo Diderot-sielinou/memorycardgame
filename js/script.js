@@ -1,3 +1,4 @@
+/* global alert */
 const emojieTab = [
   "🇨🇦",
   "🇨🇦",
